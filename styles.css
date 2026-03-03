@@ -252,54 +252,101 @@ input, select, textarea {
     transition: all var(--transition-base);
 }
 
+/* ===========================
+   Propiedades - mostrar solo imágenes
+   Oculta badges, botones y contenido de las tarjetas
+   =========================== */
+.property-card__content,
+.property-card__badge,
+.property-card__favorite,
+.property-card__location,
+.property-card__title,
+.property-card__features,
+.property-card__footer {
+    display: none !important;
+}
+
+.properties__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-6);
+}
+
+.property-card {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.property-card__image-wrapper {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.property-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .header--scrolled {
     box-shadow: var(--shadow-md);
 }
+
+/* ============================= */
+/* HEADER LOGOS CONFIGURACIÓN   */
+/* ============================= */
 
 .header__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    height: auto;
+    padding: 15px 0;
 }
 
-/* Logo */
-.header__logo,
-.footer__logo {
+/* Contenedor de los dos logos con flexbox */
+.header__logo-container {
     display: flex;
     align-items: center;
-    gap: var(--space-4);
-    font-family: var(--font-heading);
-    font-size: var(--text-xl);
-    font-weight: 600;
+    gap: 20px;
 }
 
-.logo__text {
-    color: var(--color-primary);
+/* Logo principal */
+.header__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-.logo__accent {
-    color: var(--color-accent);
-    font-weight: 500;
+.header__logo img {
+    height: auto;
+    width: auto;
+    max-height: 70px;
+    object-fit: contain;
+    display: block;
 }
 
-/* Estilos para logo en imagen */
-.logo__image {
-    height: 80px;
+/* Logo Harvard */
+.partner__logo {
+    max-height: 85px;
     width: auto;
     object-fit: contain;
-    transition: transform var(--transition-fast);
+    display: block;
+    
 }
 
-.logo__image:hover {
-    transform: scale(1.02);
+@media (max-width: 767px) {
+    .partner__logo {
+        display: none;
+    }
+    
+    .header__logo-container {
+        gap: 15px;
+    }
 }
 
-.logo__image--footer {
-    height: 70px;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
-}
 
 /* Navegación */
 .header__nav {
@@ -1112,6 +1159,34 @@ input, select, textarea {
     text-align: center;
 }
 
+/* FlexMLS - Listado de propiedades */
+.properties__flexmls {
+    margin-top: var(--space-16);
+    padding: var(--space-12);
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flexmls__title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: var(--space-2);
+    font-family: var(--font-display);
+}
+
+.flexmls__subtitle {
+    font-size: 1rem;
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-6);
+}
+
+.properties__flexmls iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 /* ==============================================
    9. SECCIÓN SOBRE MÍ
    ============================================== */
@@ -1632,77 +1707,7 @@ input, select, textarea {
     color: var(--color-gray-600);
 }
 
-/* ==============================================
-   PARTNERS - Sección de colaboradores
-   ============================================== */
-.partners {
-    padding: var(--space-20) 0;
-    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-gray-100) 100%);
-}
 
-.partners__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-12);
-    margin-top: var(--space-16);
-}
-
-@media (min-width: 768px) {
-    .partners__grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
-}
-
-.partner-card {
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
-    padding: var(--space-12);
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    transition: all var(--transition-base);
-    border: 1px solid rgba(26, 43, 60, 0.1);
-}
-
-.partner-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
-    border-color: var(--color-accent);
-}
-
-.partner-card__logo-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 180px;
-    margin-bottom: var(--space-8);
-    background: var(--color-gray-100);
-    border-radius: var(--radius-md);
-}
-
-.partner-card__logo {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    transition: transform var(--transition-base), filter var(--transition-base);
-}
-
-.partner-card:hover .partner-card__logo {
-    transform: scale(1.05);
-    filter: drop-shadow(0 4px 12px rgba(197, 160, 89, 0.2));
-}
-
-.partner-card__name {
-    font-size: var(--text-lg);
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: var(--space-4);
-}
-
-.partner-card__description {
-    color: var(--color-gray-600);
-    font-size: var(--text-sm);
-    line-height: 1.6;
-}
 
 /* ==============================================
    13. MEDIA QUERIES ADICIONALES
@@ -1734,3 +1739,5 @@ input, select, textarea {
     */
 }
 /* Group for multiple logos in header - Removed */
+
+

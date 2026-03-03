@@ -23,10 +23,18 @@
     <header class="header" id="header">
         <div class="container header__container">
             
-            <!-- Logo -->
-            <a href="#" class="header__logo">
-                <img src="assets/images/logo.png" alt="Casa Posible USA" class="logo__image">
-            </a>
+            
+            <!-- Logo Container -->
+            <div class="header__logo-container">
+                <a href="#" class="header__logo">
+                    <img src="assets/images/logo.png" alt="Casa Posible USA" class="logo__image">
+                    
+                </a>
+                <div style="width: 1px; height: 35px; background-color: rgba(255,255,255,0.3); margin: 0 20px;"></div>
+
+                <!-- Logo asociado: Harvard Real Estate Group -->
+                <img src="assets/logohavard1.png" alt="Harvard Real Estate Group" class="partner__logo">
+            </div>
 
             
             <!-- Navegación principal -->
@@ -446,6 +454,22 @@
             <div class="properties__cta">
                 <a href="#" class="btn btn--outline">Ver Todas las Propiedades</a>
             </div>
+
+            <!-- FlexMLS - Listado de propiedades en venta -->
+            <div class="properties__flexmls">
+                <h3 class="flexmls__title">Casas en Venta Disponibles</h3>
+                <p class="flexmls__subtitle">Explora nuestro catálogo completo de propiedades</p>
+                <h2 style="text-align:center; color:#d4af37;">Buscador Oficial de Propiedades</h2>
+                <p style="text-align:center; color:white;">Acceso directo al inventario en tiempo real del MLS</p>
+                <iframe 
+                    src='https://my.flexmls.com/dinorahnations'
+                    frameborder='0' 
+                    width='100%' 
+                    height='900'
+                    title='Listado de propiedades FlexMLS'
+                    style='border-radius: 8px; margin-top: 20px;'
+                ></iframe>
+            </div>
         </div>
     </section>
 
@@ -477,7 +501,7 @@
             <div class="about__image-wrapper">
                 <div class="about__image-frame">
                     <!-- Foto de perfil de Dinorah -->
-                    <img src="assets/images/dinorah-profile.png" alt="Dinorah Nation - Agente de Bienes Raíces" class="about__image">
+                    <img src="assets/dinorah-profile.png" alt="Dinorah Nation - Agente de Bienes Raíces" class="about__image">
                 </div>
                 <!-- Decoración -->
                 <div class="about__decoration"></div>
@@ -610,87 +634,28 @@
                     </div>
                 </div>
                 
-                <!-- Formulario -->
-                <form class="contact__form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nombre" class="form-label">Nombre Completo *</label>
-                            <input 
-                                type="text" 
-                                id="nombre" 
-                                name="nombre" 
-                                class="form-input" 
-                                placeholder="Tu nombre"
-                                required
-                            >
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email *</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                class="form-input" 
-                                placeholder="tu@email.com"
-                                required
-                            >
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="telefono" class="form-label">Teléfono *</label>
-                            <input 
-                                type="tel" 
-                                id="telefono" 
-                                name="telefono" 
-                                class="form-input" 
-                                placeholder="+52 (55) 1234-5678"
-                                required
-                            >
-                        </div>
-                        <div class="form-group">
-                            <label for="interes" class="form-label">Tipo de Interés *</label>
-                            <select id="interes" name="interes" class="form-select" required>
-                                <option value="">Selecciona una opción</option>
-                                <option value="comprar">Comprar</option>
-                                <option value="vender">Vender</option>
-                                <option value="rentar">Rentar</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="presupuesto" class="form-label">Presupuesto Aproximado</label>
-                        <select id="presupuesto" name="presupuesto" class="form-select">
-                            <option value="">Selecciona un rango</option>
-                            <option value="menos-2m">Menos de $2,000,000</option>
-                            <option value="2m-5m">$2,000,000 - $5,000,000</option>
-                            <option value="5m-10m">$5,000,000 - $10,000,000</option>
-                            <option value="10m-20m">$10,000,000 - $20,000,000</option>
-                            <option value="mas-20m">Más de $20,000,000</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="mensaje" class="form-label">Mensaje</label>
-                        <textarea 
-                            id="mensaje" 
-                            name="mensaje" 
-                            class="form-textarea" 
-                            rows="4" 
-                            placeholder="Cuéntame sobre tu proyecto o propiedad ideal..."
-                        ></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn--primary btn--full">
-                        <span>Enviar Mensaje</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="22" y1="2" x2="11" y2="13"/>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                        </svg>
-                    </button>
-                </form>
+                <!-- Formulario de Contacto con Formspree -->
+                <form action="https://formspree.io/f/xqedvlez" method="POST" style="display: flex; flex-direction: column; gap: 15px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px;">
+    
+    <div>
+        <label style="display: block; color: white; margin-bottom: 5px;">Nombre</label>
+        <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc; background: white; color: black;">
+    </div>
+
+    <div>
+        <label style="display: block; color: white; margin-bottom: 5px;">Correo Electrónico</label>
+        <input type="email" name="_replyto" required style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc; background: white; color: black;">
+    </div>
+
+    <div>
+        <label style="display: block; color: white; margin-bottom: 5px;">Mensaje</label>
+        <textarea name="message" rows="4" required style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc; background: white; color: black;"></textarea>
+    </div>
+
+    <button type="submit" style="background-color: #d4af37; color: black; padding: 15px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase;">
+        Enviar Mensaje
+    </button>
+</form>
             </div>
         </div>
     </section>
