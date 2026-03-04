@@ -1550,7 +1550,7 @@ input, select, textarea {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .footer__container {
         grid-template-columns: 2fr 1fr 1fr 1fr;
     }
@@ -1623,6 +1623,7 @@ input, select, textarea {
 
 .footer__bottom p {
     font-size: var(--text-sm);
+    
 }
 
 .footer__partner {
@@ -1639,6 +1640,8 @@ input, select, textarea {
 .footer__partner a:hover {
     opacity: 0.8;
     text-decoration: underline;
+
+       
 }
 
 /* ==============================================
