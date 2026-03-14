@@ -22,3 +22,8 @@ build/
 
 # Others
 .cache/
+
+#sin python
+.venv/
+__pycache__/
+*.pyc
