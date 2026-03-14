@@ -34,3 +34,4 @@ _BAK_archive/
 .venv/
 
 README.md
+.gitignore
