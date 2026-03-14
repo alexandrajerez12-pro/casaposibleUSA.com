@@ -27,3 +27,8 @@ build/
 .venv/
 __pycache__/
 *.pyc
+
+# Ignorar carpetas de respaldo o archivos temporales
+archive/
+_BAK_archive/
+.venv/
