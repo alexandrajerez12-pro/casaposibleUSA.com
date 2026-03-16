@@ -1645,6 +1645,35 @@ input, select, textarea {
 }
 
 /* ==============================================
+   LOGO - IDEAS DE ESTILO (descomenta solo una)
+   ============================================== */
+
+/* --- IDEA 1: Halo blanco suave alrededor del logo --- */
+.logo__image {
+  filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6));
+}
+
+/* --- IDEA 2: Invertir colores y rotar tono para mantener el rojo --- */
+/* .logo__image {
+  filter: invert(1) hue-rotate(180deg) brightness(1.5);
+} */
+
+/* --- IDEA 3: Realzar brillo, contraste y saturación --- */
+/* .logo__image {
+  filter: brightness(1.2) contrast(1.1) saturate(1.3);
+} */
+
+/* --- IDEA 4: Contenedor con efecto cristal esmerilado --- */
+/* .logo-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+} */
+
+
+
+/* ==============================================
    12. ANIMACIONES Y EFECTOS
    ============================================== */
 
