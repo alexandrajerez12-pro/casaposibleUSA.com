@@ -4,39 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Dinorah Nations - Tu aliada en bienes raíces. Encuentra el hogar que cuenta tu historia.">
-    
+
     <title>Casa Posible USA | Bienes Raíces de Lujo</title>
-    
-    <!-- Google Fonts - Tipografía elegante -->
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Nuestros estilos CSS -->
+
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- =============================================
-         HEADER - Logo, navegación y botón de contacto
+         HEADER
          ============================================= -->
     <header class="header" id="header">
         <div class="container header__container">
-            
-            
+
             <!-- Logo Container -->
             <div class="header__logo-container">
                 <a href="#" class="header__logo">
                     <img src="assets/images/logo.png" alt="Casa Posible USA" class="logo__image">
-                    
                 </a>
                 <div style="width: 1px; height: 35px; background-color: rgba(255,255,255,0.3); margin: 0 20px;"></div>
-
-                <!-- Logo asociado: Harvard Real Estate Group -->
                 <img src="assets/images/logohavard1.png" alt="Harvard Real Estate Group" class="partner__logo">
             </div>
 
-            
             <!-- Navegación principal -->
             <nav class="header__nav" id="nav">
                 <ul class="nav__list">
@@ -57,29 +52,30 @@
                     </li>
                 </ul>
             </nav>
-            
-            <!-- Botón de contacto (visible en desktop) -->
+
+            <!-- Botón de contacto (desktop) -->
             <a href="#contacto" class="header__cta btn btn--primary">
                 Contáctame
             </a>
-            
-            <!-- Botón hamburguesa para móvil -->
+
+            <!-- Botón hamburguesa (móvil) -->
             <button class="header__menu-toggle" id="menuToggle" aria-label="Abrir menú">
                 <span class="menu-toggle__bar"></span>
                 <span class="menu-toggle__bar"></span>
                 <span class="menu-toggle__bar"></span>
             </button>
+
         </div>
     </header>
 
+
     <!-- =============================================
-         HERO - Imagen impactante con texto y buscador
+         HERO
          ============================================= -->
     <section class="hero" id="inicio">
         <div class="hero__overlay"></div>
         <div class="container hero__container">
-            
-            <!-- Contenido principal del hero -->
+
             <div class="hero__content">
                 <h1 class="hero__title">
                     Encuentra el hogar que <span class="text-accent">cuenta tu historia</span>
@@ -88,48 +84,9 @@
                     Propiedades exclusivas que reflejan tu estilo de vida
                 </p>
             </div>
-            
-            <!-- Buscador simple -->
-            <!-- <div class="hero__search">
-                <form class="search-form" id="searchForm">
-                    <div class="search-form__group">
-                        <label for="searchLocation" class="search-form__label">Ubicación</label>
-                        <input 
-                            type="text" 
-                            id="searchLocation" 
-                            class="search-form__input" 
-                            placeholder="Ciudad o zona..."
-                        >
-                    </div>
-                    <div class="search-form__group">
-                        <label for="searchType" class="search-form__label">Tipo</label>
-                        <select id="searchType" class="search-form__select">
-                            <option value="">Todos</option>
-                            <option value="casa">Casa</option>
-                            <option value="departamento">Departamento</option>
-                            <option value="terreno">Terreno</option>
-                        </select>
-                    </div>
-                    <div class="search-form__group">
-                        <label for="searchBudget" class="search-form__label">Presupuesto</label>
-                        <select id="searchBudget" class="search-form__select">
-                            <option value="">Cualquiera</option>
-                            <option value="0-500000">Hasta $500,000</option>
-                            <option value="500000-1000000">$500,000 - $1,000,000</option>
-                            <option value="1000000+">Más de $1,000,000</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="search-form__btn btn btn--primary">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        Buscar
-                    </button>
-                </form>
-            </div> -->
+
         </div>
-        
+
         <!-- Indicador de scroll -->
         <div class="hero__scroll-indicator">
             <span>Descubre más</span>
@@ -139,12 +96,13 @@
         </div>
     </section>
 
+
     <!-- =============================================
-         BIENVENIDA - Mensaje de impacto
+         BIENVENIDA
          ============================================= -->
     <section class="welcome" id="bienvenida">
         <div class="container">
-            
+
             <!-- Pregunta de impacto -->
             <div class="welcome__hero">
                 <h2 class="welcome__question">
@@ -154,18 +112,18 @@
                     ¡Está en el sitio correcto con información muy útil y sencilla para ayudarle a tomar el primer paso!
                 </p>
             </div>
-            
+
             <!-- Mensaje de bienvenida -->
             <div class="welcome__message">
                 <div class="welcome__message-content">
                     <h3 class="welcome__title">¡Bienvenido!</h3>
                     <p>
-                        Gracias por visitar nuestra página, por favor siéntase en plena confianza de 
-                        contactarnos y permítanos el placer de poderle ayudar a comprar o a vender casa con 
+                        Gracias por visitar nuestra página, por favor siéntase en plena confianza de
+                        contactarnos y permítanos el placer de poderle ayudar a comprar o a vender casa con
                         <strong>integridad, profesionalismo y esmero</strong>.
                     </p>
                 </div>
-                
+
                 <!-- Destacado ITIN -->
                 <div class="welcome__itin-box">
                     <div class="itin-box__icon">
@@ -180,14 +138,13 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Título de servicios -->
+
+            <!-- Servicios -->
             <h3 class="services__title">¿Cómo podemos ayudarle?</h3>
-            
-            <!-- Grid de servicios -->
+
             <div class="services__grid">
-                
-                <!-- Servicio 1: Venta de Casa -->
+
+                <!-- Servicio 1: Venta -->
                 <div class="service-card">
                     <div class="service-card__icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -197,14 +154,14 @@
                     </div>
                     <h4 class="service-card__title">Venta de Casa</h4>
                     <p class="service-card__description">
-                        Casa Posible USA Real Estate por medio de Dinorah Nations le ayudará con este paso tan importante. 
-                        Nos esforzamos por brindarle a todos nuestros clientes un servicio en su propio idioma, 
+                        Casa Posible USA Real Estate por medio de Dinorah Nations le ayudará con este paso tan importante.
+                        Nos esforzamos por brindarle a todos nuestros clientes un servicio en su propio idioma,
                         completamente profesional, humano, eficiente y honesto.
                     </p>
                     <a href="#propiedades" class="service-card__btn">Ver Casas en Venta</a>
                 </div>
-                
-                <!-- Servicio 2: Compra de Casa -->
+
+                <!-- Servicio 2: Compra -->
                 <div class="service-card service-card--featured">
                     <div class="service-card__badge">Popular</div>
                     <div class="service-card__icon">
@@ -216,14 +173,14 @@
                     </div>
                     <h4 class="service-card__title">Compra de Casa</h4>
                     <p class="service-card__description">
-                        Le ayudaremos a conseguir la casa de sus sueños. Si le interesa recibir un listado de las casas 
-                        disponibles en las áreas de su preferencia, con todo gusto le proporcionaremos sin costo alguno 
+                        Le ayudaremos a conseguir la casa de sus sueños. Si le interesa recibir un listado de las casas
+                        disponibles en las áreas de su preferencia, con todo gusto le proporcionaremos sin costo alguno
                         un listado actual y completamente detallado.
                     </p>
                     <a href="#contacto" class="service-card__btn">Más Información</a>
                 </div>
-                
-                <!-- Servicio 3: Préstamos ITIN -->
+
+                <!-- Servicio 3: ITIN -->
                 <div class="service-card">
                     <div class="service-card__icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -235,34 +192,34 @@
                     </div>
                     <h4 class="service-card__title">Préstamos Hipotecarios ITIN</h4>
                     <p class="service-card__description">
-                        Si desea más información de cómo obtener un crédito financiero y todos los requisitos 
-                        para poder ser pre-calificado, contáctenos. Todo nuestro esfuerzo estará encaminado a 
+                        Si desea más información de cómo obtener un crédito financiero y todos los requisitos
+                        para poder ser pre-calificado, contáctenos. Todo nuestro esfuerzo estará encaminado a
                         brindarle un servicio altamente profesional, íntegro y súper eficiente.
                     </p>
                     <a href="#contacto" class="service-card__btn">Más Información</a>
                 </div>
-                
+
             </div>
-            
-            <!-- Mensaje final de compromiso -->
+
+            <!-- Mensaje de compromiso -->
             <div class="welcome__commitment">
                 <p>
-                    La compra o venta de una propiedad es algo que todos llegamos a hacer en nuestras vidas. 
-                    <strong>Casa Posible USA Real Estate</strong> por medio de <strong>Dinorah Nations</strong> 
+                    La compra o venta de una propiedad es algo que todos llegamos a hacer en nuestras vidas.
+                    <strong>Casa Posible USA Real Estate</strong> por medio de <strong>Dinorah Nations</strong>
                     le ayudará con este paso tan importante.
                 </p>
             </div>
-            
+
         </div>
     </section>
 
+
     <!-- =============================================
-         PROPIEDADES - 3 tarjetas de ejemplo
+         PROPIEDADES
          ============================================= -->
     <section class="properties" id="propiedades">
         <div class="container">
-            
-            <!-- Encabezado de sección -->
+
             <div class="section-header">
                 <span class="section-header__tag">Exclusivas</span>
                 <h2 class="section-header__title">Propiedades Destacadas</h2>
@@ -270,16 +227,15 @@
                     Descubre nuestra selección de propiedades premium cuidadosamente elegidas para ti
                 </p>
             </div>
-            
-            <!-- Grid de propiedades -->
+
             <div class="properties__grid">
-                
-                <!-- Tarjeta de propiedad 1 -->
+
+                <!-- Propiedad 1 -->
                 <article class="property-card">
                     <div class="property-card__image-wrapper">
-                        <img 
-                            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&h=400&fit=crop" 
-                            alt="Casa moderna con piscina" 
+                        <img
+                            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&h=400&fit=crop"
+                            alt="Casa moderna con piscina"
                             class="property-card__image"
                         >
                         <span class="property-card__badge">Destacada</span>
@@ -326,18 +282,18 @@
                             </span>
                         </div>
                         <div class="property-card__footer">
-                            <p class="property-card__price">$12,500,000 <span>MXN</span></p>
+                            <p class="property-card__price">$625,000 <span>USD</span></p>
                             <a href="#contacto" class="property-card__btn">Ver Detalles</a>
                         </div>
                     </div>
                 </article>
-                
-                <!-- Tarjeta de propiedad 2 -->
+
+                <!-- Propiedad 2 -->
                 <article class="property-card">
                     <div class="property-card__image-wrapper">
-                        <img 
-                            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop" 
-                            alt="Penthouse de lujo" 
+                        <img
+                            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop"
+                            alt="Penthouse de lujo"
                             class="property-card__image"
                         >
                         <span class="property-card__badge property-card__badge--new">Nueva</span>
@@ -384,18 +340,18 @@
                             </span>
                         </div>
                         <div class="property-card__footer">
-                            <p class="property-card__price">$8,900,000 <span>MXN</span></p>
+                            <p class="property-card__price">$445,000 <span>USD</span></p>
                             <a href="#contacto" class="property-card__btn">Ver Detalles</a>
                         </div>
                     </div>
                 </article>
-                
-                <!-- Tarjeta de propiedad 3 -->
+
+                <!-- Propiedad 3 -->
                 <article class="property-card">
                     <div class="property-card__image-wrapper">
-                        <img 
-                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" 
-                            alt="Villa mediterránea" 
+                        <img
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+                            alt="Villa mediterránea"
                             class="property-card__image"
                         >
                         <span class="property-card__badge property-card__badge--sold">Vendida</span>
@@ -442,42 +398,45 @@
                             </span>
                         </div>
                         <div class="property-card__footer">
-                            <p class="property-card__price">$18,750,000 <span>MXN</span></p>
+                            <p class="property-card__price">$937,500 <span>USD</span></p>
                             <a href="#contacto" class="property-card__btn">Ver Detalles</a>
                         </div>
                     </div>
                 </article>
-                
+
             </div>
-            
+
             <!-- Botón ver más -->
             <div class="properties__cta">
                 <a href="#" class="btn btn--outline">Ver Todas las Propiedades</a>
             </div>
 
-            <!-- FlexMLS - Listado de propiedades en venta -->
+            <!-- FlexMLS -->
             <div class="properties__flexmls">
                 <h3 class="flexmls__title">Casas en Venta Disponibles</h3>
                 <p class="flexmls__subtitle">Explora nuestro catálogo completo de propiedades</p>
                 <h2 style="text-align:center; color:#d4af37;">Buscador Oficial de Propiedades</h2>
                 <p style="text-align:center; color:white;">Acceso directo al inventario en tiempo real del MLS</p>
-                <iframe 
-                src="https://link.flexmls.com/1lpmop7msaok,4" width="100%" height="650" frameborder="0"></iframe>
-                    frameborder='0' 
-                    width='100%' 
-                    height='600'
-                    title='Listado de propiedades FlexMLS'
-                    style='border-radius: 8px; margin-top: 20px;'
+                <iframe
+                    src="https://link.flexmls.com/1lpmop7msaok,4"
+                    width="100%"
+                    height="650"
+                    frameborder="0"
+                    title="Listado de propiedades FlexMLS"
+                    style="border-radius: 8px; margin-top: 20px;"
                 ></iframe>
             </div>
+
         </div>
     </section>
 
+
     <!-- =============================================
-         PARTNERS - Affiliados y colaboradores
+         PARTNERS
          ============================================= -->
     <section class="partners" id="partners">
         <div class="container">
+
             <div class="section-header">
                 <span class="section-header__tag">Colaboradores</span>
                 <h2 class="section-header__title">Nuestros Asociados</h2>
@@ -485,47 +444,51 @@
                     Trabajamos con instituciones líderes en bienes raíces para ofrecerte los mejores servicios
                 </p>
             </div>
-            
-                <!-- Harvard Real State Group Removed -->
+
+            <div style="display: flex; justify-content: center; align-items: center; padding: 40px 0;">
+                <div style="text-align: center; padding: 30px 50px; border: 1px solid rgba(212,175,55,0.4); border-radius: 12px; background: rgba(255,255,255,0.03);">
+                    <img src="assets/images/logohavard1.png" alt="Harvard Real Estate Group" style="max-width: 220px; margin-bottom: 16px;">
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Harvard Real Estate Group</p>
+                </div>
             </div>
+
         </div>
     </section>
 
+
     <!-- =============================================
-         SOBRE MÍ - Información personal con foto
+         SOBRE MÍ
          ============================================= -->
     <section class="about" id="sobre-mi">
         <div class="container about__container">
-            
-                    <!-- Imagen / Foto de perfil -->
+
+            <!-- Foto de perfil -->
             <div class="about__image-wrapper">
                 <div class="about__image-frame">
-                    <!-- Foto de perfil de Dinorah -->
                     <img src="assets/images/dinorah-profile.png" alt="Dinorah Nations - Agente de Bienes Raíces" class="about__image">
                 </div>
-                <!-- Decoración -->
                 <div class="about__decoration"></div>
             </div>
-            
-            <!-- Contenido de texto -->
+
+            <!-- Contenido -->
             <div class="about__content">
                 <span class="section-header__tag">Conóceme</span>
                 <h2 class="about__title">Dinorah Nations</h2>
                 <p class="about__role">Tu Aliada en Bienes Raíces</p>
-                
+
                 <div class="about__text">
                     <p>
-                        Soy <strong>Dinorah Nations</strong>, tu aliada en bienes raíces. Mi enfoque es entender 
-                        tu estilo de vida para conectar con la casa perfecta, garantizando un proceso 
+                        Soy <strong>Dinorah Nations</strong>, tu aliada en bienes raíces. Mi enfoque es entender
+                        tu estilo de vida para conectar con la casa perfecta, garantizando un proceso
                         seguro y sin estrés.
                     </p>
                     <p>
-                        Con años de experiencia en el mercado inmobiliario, me especializo en crear 
-                        conexiones duraderas entre personas y propiedades que realmente reflejan 
+                        Con años de experiencia en el mercado inmobiliario, me especializo en crear
+                        conexiones duraderas entre personas y propiedades que realmente reflejan
                         quiénes son.
                     </p>
                 </div>
-                
+
                 <!-- Estadísticas -->
                 <div class="about__stats">
                     <div class="stat">
@@ -541,31 +504,33 @@
                         <span class="stat__label">Años de Experiencia</span>
                     </div>
                 </div>
-                
+
                 <a href="#contacto" class="btn btn--primary">Trabajemos Juntos</a>
             </div>
+
         </div>
     </section>
 
+
     <!-- =============================================
-         FORMULARIO DE CONTACTO
+         CONTACTO
          ============================================= -->
     <section class="contact" id="contacto">
         <div class="container">
-            
-            <!-- Encabezado de sección -->
+
             <div class="section-header section-header--light">
                 <span class="section-header__tag">Contacto</span>
                 <h2 class="section-header__title">¿Listo para Encontrar tu Hogar?</h2>
                 <p class="section-header__description">
-                   Hablemos de tu sueño y encontremos tu propiedad ideal
+                    Hablemos de tu sueño y encontremos tu propiedad ideal
                 </p>
             </div>
-            
+
             <div class="contact__wrapper">
-                
+
                 <!-- Información de contacto -->
                 <div class="contact__info">
+
                     <div class="contact__info-item">
                         <div class="contact__info-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -577,7 +542,7 @@
                             <p>1(601) 497-7788</p>
                         </div>
                     </div>
-                    
+
                     <div class="contact__info-item">
                         <div class="contact__info-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -591,7 +556,7 @@
                             <p>dinorah@hgroupms.com</p>
                         </div>
                     </div>
-                    
+
                     <div class="contact__info-item">
                         <div class="contact__info-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -604,7 +569,7 @@
                             <p>Mississippi, USA</p>
                         </div>
                     </div>
-                    
+
                     <!-- Redes sociales -->
                     <div class="contact__social">
                         <a href="https://www.facebook.com/share/p/1J3Mjkfvqe/" class="social-link" aria-label="Facebook" target="_blank">
@@ -612,7 +577,7 @@
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                             </svg>
                         </a>
-                        <a href="#" class="social-link" aria-label="Instagram">
+                        <a href="https://www.instagram.com/casaposibleusa?igsh=MXZ1cnJsbDRpb3B6dg" class="social-link" aria-label="Instagram" target="_blank">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
@@ -626,50 +591,73 @@
                                 <circle cx="4" cy="4" r="2"/>
                             </svg>
                         </a>
-                        <a href="#" class="social-link" aria-label="WhatsApp">
+                        <a href="https://wa.me/16014977788" class="social-link" aria-label="WhatsApp" target="_blank">
                             <svg viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                             </svg>
                         </a>
                     </div>
+
                 </div>
-                
-                <!-- Formulario de Contacto con Formspree -->
-                <form action="https://formspree.io/f/xqedvlez" method="POST" style="display: flex; flex-direction: column; gap: 15px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px;">
-    
-    <div>
-        <label style="display: block; color: white; margin-bottom: 5px;">Nombre</label>
-        <input type="text" name="name" required style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc; background: white; color: black;">
-    </div>
 
-    <div>
-        <label style="display: block; color: white; margin-bottom: 5px;">Correo Electrónico</label>
-        <input type="email" name="_replyto" required style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc; background: white; color: black;">
-    </div>
+                <!-- Formulario de contacto (CORREGIDO - un solo <form>) -->
+                <form
+                    action="https://formspree.io/f/xqedvlez"
+                    method="POST"
+                    style="display: flex; flex-direction: column; gap: 15px; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px;"
+                >
+                    <input type="hidden" name="_next" value="https://alexandrajerez12-pro.github.io/casaposibleUSA.com/gracias.html">
 
-    <div>
-        <label style="display: block; color: white; margin-bottom: 5px;">Mensaje</label>
-        <textarea name="message" rows="4" required style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc; background: white; color: black;"></textarea>
-    </div>
-    <form action="https://formspree.io/f/xqedvlez" method="POST">
-    
-    <input type="hidden" name="_next" value="https://alexandrajerez12-pro.github.io/casaposibleUSA.com/gracias.html">
+                    <div>
+                        <label style="display: block; color: white; margin-bottom: 5px;">Nombre</label>
+                        <input
+                            type="text"
+                            name="name"
+                            required
+                            style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc; background: white; color: black;"
+                        >
+                    </div>
 
-    
+                    <div>
+                        <label style="display: block; color: white; margin-bottom: 5px;">Correo Electrónico</label>
+                        <input
+                            type="email"
+                            name="_replyto"
+                            required
+                            style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc; background: white; color: black;"
+                        >
+                    </div>
 
-    <button type="submit"style="background-color: #d4af37; color: black; padding: 15px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase;">
-       Enviar</button>
+                    <div>
+                        <label style="display: block; color: white; margin-bottom: 5px;">Mensaje</label>
+                        <textarea
+                            name="message"
+                            rows="4"
+                            required
+                            style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc; background: white; color: black;"
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        style="background-color: #d4af37; color: black; padding: 15px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase;"
+                    >
+                        Enviar
+                    </button>
+
+                </form>
 
             </div>
         </div>
     </section>
+
 
     <!-- =============================================
          FOOTER
          ============================================= -->
     <footer class="footer">
         <div class="container footer__container">
-            
+
             <!-- Logo y descripción -->
             <div class="footer__brand">
                 <a href="#" class="footer__logo">
@@ -679,7 +667,7 @@
                     Tu aliada en bienes raíces. Conectando personas con hogares que cuentan historias.
                 </p>
             </div>
-            
+
             <!-- Links rápidos -->
             <div class="footer__links">
                 <h4>Enlaces Rápidos</h4>
@@ -690,7 +678,7 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
-            
+
             <!-- Servicios -->
             <div class="footer__services">
                 <h4>Servicios</h4>
@@ -701,7 +689,7 @@
                     <li><a href="#">Avalúos</a></li>
                 </ul>
             </div>
-            
+
             <!-- Contacto rápido -->
             <div class="footer__contact">
                 <h4>Contacto</h4>
@@ -710,17 +698,19 @@
                 <p>dinorah@hgroupms.com</p>
                 <p>Mississippi, USA</p>
             </div>
+
         </div>
-        
+
         <!-- Copyright -->
         <div class="footer__bottom">
             <div class="container">
-                <p>&copy; 2024 Casa Posible USA. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Casa Posible USA. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
 </html>
