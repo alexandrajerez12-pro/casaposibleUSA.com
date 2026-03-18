@@ -12,6 +12,192 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+
+    <style>
+
+
+    /* Footer logos — manejado por styles.css */
+
+    /* ===== HERO CENTERING ===== */
+    .hero__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .hero__content {
+        text-align: center;
+    }
+    .hero__search-widget {
+        margin-top: 36px;
+        width: 100%;
+        max-width: 860px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ===== HERO SEARCH WIDGET ===== */
+    .hsw-form {
+        background: rgba(10, 8, 3, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 16px;
+        padding: 24px 28px 20px;
+        box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    }
+
+    .hsw-form__top {
+        margin-bottom: 14px;
+    }
+
+    .hsw-form__location {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .hsw-form__location svg {
+        position: absolute;
+        left: 14px;
+        width: 18px;
+        height: 18px;
+        color: #d4af37;
+        pointer-events: none;
+    }
+
+    .hsw-form__input {
+        width: 100%;
+        padding: 13px 16px 13px 44px;
+        background: rgba(255,255,255,0.95);
+        border: 2px solid transparent;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        color: #1a1a1a;
+        outline: none;
+        box-sizing: border-box;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .hsw-form__input:focus {
+        border-color: #d4af37;
+        box-shadow: 0 0 0 3px rgba(212,175,55,0.2);
+    }
+
+    .hsw-form__filters {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr auto;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .hsw-form__select {
+        padding: 12px 32px 12px 14px;
+        background: rgba(255,255,255,0.95);
+        border: 2px solid transparent;
+        border-radius: 8px;
+        font-size: 0.88rem;
+        color: #1a1a1a;
+        outline: none;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-color: rgba(255,255,255,0.95);
+        box-sizing: border-box;
+        width: 100%;
+        transition: border-color 0.2s;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .hsw-form__select:focus {
+        border-color: #d4af37;
+    }
+
+    .hsw-form__input--price {
+        padding-left: 16px;
+        font-size: 0.88rem;
+    }
+
+    .hsw-form__btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #d4af37;
+        color: #000;
+        border: none;
+        border-radius: 8px;
+        padding: 13px 20px;
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+        box-shadow: 0 4px 16px rgba(212,175,55,0.4);
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .hsw-form__btn:hover {
+        background: #e8c84a;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(212,175,55,0.55);
+    }
+
+    .hsw-form__near {
+        margin-top: 14px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hsw-form__near-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: transparent;
+        color: rgba(255,255,255,0.65);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 24px;
+        padding: 8px 20px;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: color 0.2s, border-color 0.2s, background 0.2s;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .hsw-form__near-btn:hover {
+        color: #d4af37;
+        border-color: #d4af37;
+        background: rgba(212,175,55,0.08);
+    }
+
+    @media (max-width: 900px) {
+        .hsw-form__filters {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .hsw-form__btn {
+            grid-column: span 3;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .hsw-form {
+            padding: 18px 16px;
+        }
+        .hsw-form__filters {
+            grid-template-columns: 1fr 1fr;
+        }
+        .hsw-form__btn {
+            grid-column: span 2;
+            justify-content: center;
+        }
+    }
+    </style>
+
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -83,6 +269,66 @@
                 <p class="hero__subtitle">
                     Propiedades exclusivas que reflejan tu estilo de vida
                 </p>
+            </div>
+
+            <!-- Buscador hero -->
+            <div class="hero__search-widget">
+                <form class="hsw-form" id="homeSearchForm" onsubmit="searchHomes(event)">
+
+                    <div class="hsw-form__top">
+                        <div class="hsw-form__location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <input type="text" placeholder="Ciudad, Escuela o Código Postal..." class="hsw-form__input">
+                        </div>
+                    </div>
+
+                    <div class="hsw-form__filters">
+                        <select class="hsw-form__select">
+                            <option value="">Todos los Tipos</option>
+                            <option>Casa</option>
+                            <option>Condominio</option>
+                            <option>Townhouse</option>
+                            <option>Terreno</option>
+                        </select>
+                        <select class="hsw-form__select">
+                            <option value="">Recámaras</option>
+                            <option>1+</option>
+                            <option>2+</option>
+                            <option>3+</option>
+                            <option>4+</option>
+                            <option>5+</option>
+                        </select>
+                        <select class="hsw-form__select">
+                            <option value="">Baños</option>
+                            <option>1+</option>
+                            <option>2+</option>
+                            <option>3+</option>
+                            <option>4+</option>
+                        </select>
+                        <input type="number" placeholder="Precio Mín." class="hsw-form__input hsw-form__input--price">
+                        <input type="number" placeholder="Precio Máx." class="hsw-form__input hsw-form__input--price">
+                        <button type="submit" class="hsw-form__btn">
+                            BUSCAR AHORA
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
+                                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="hsw-form__near">
+                        <button type="button" class="hsw-form__near-btn" onclick="searchNearMe()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 2v3m0 14v3M2 12h3m14 0h3"/>
+                            </svg>
+                            Buscar Cerca de Mí
+                        </button>
+                    </div>
+
+                </form>
             </div>
 
         </div>
@@ -228,183 +474,7 @@
                 </p>
             </div>
 
-            <div class="properties__grid">
 
-                <!-- Propiedad 1 -->
-                <article class="property-card">
-                    <div class="property-card__image-wrapper">
-                        <img
-                            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&h=400&fit=crop"
-                            alt="Casa moderna con piscina"
-                            class="property-card__image"
-                        >
-                        <span class="property-card__badge">Destacada</span>
-                        <button class="property-card__favorite" aria-label="Agregar a favoritos">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="property-card__content">
-                        <div class="property-card__location">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                            <span>Brandon, Mississippi</span>
-                        </div>
-                        <h3 class="property-card__title">Residencia Contemporánea con Jardín</h3>
-                        <div class="property-card__features">
-                            <span class="feature">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                </svg>
-                                450 m²
-                            </span>
-                            <span class="feature">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M2 4v16"/>
-                                    <path d="M2 8h18a2 2 0 0 1 2 2v10"/>
-                                    <path d="M2 17h20"/>
-                                    <path d="M6 8v9"/>
-                                </svg>
-                                4 Recámaras
-                            </span>
-                            <span class="feature">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>
-                                    <line x1="10" x2="8" y1="5" y2="7"/>
-                                    <line x1="2" x2="22" y1="12" y2="12"/>
-                                    <line x1="7" x2="7" y1="19" y2="21"/>
-                                    <line x1="17" x2="17" y1="19" y2="21"/>
-                                </svg>
-                                3.5 Baños
-                            </span>
-                        </div>
-                        <div class="property-card__footer">
-                            <p class="property-card__price">$625,000 <span>USD</span></p>
-                            <a href="#contacto" class="property-card__btn">Ver Detalles</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Propiedad 2 -->
-                <article class="property-card">
-                    <div class="property-card__image-wrapper">
-                        <img
-                            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop"
-                            alt="Penthouse de lujo"
-                            class="property-card__image"
-                        >
-                        <span class="property-card__badge property-card__badge--new">Nueva</span>
-                        <button class="property-card__favorite" aria-label="Agregar a favoritos">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="property-card__content">
-                        <div class="property-card__location">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                            <span>Madison, Mississippi</span>
-                        </div>
-                        <h3 class="property-card__title">Penthouse con Vista Panorámica</h3>
-                        <div class="property-card__features">
-                            <span class="feature">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                </svg>
-                                320 m²
-                            </span>
-                            <span class="feature">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M2 4v16"/>
-                                    <path d="M2 8h18a2 2 0 0 1 2 2v10"/>
-                                    <path d="M2 17h20"/>
-                                    <path d="M6 8v9"/>
-                                </svg>
-                                3 Recámaras
-                            </span>
-                            <span class="feature">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>
-                                    <line x1="10" x2="8" y1="5" y2="7"/>
-                                    <line x1="2" x2="22" y1="12" y2="12"/>
-                                    <line x1="7" x2="7" y1="19" y2="21"/>
-                                    <line x1="17" x2="17" y1="19" y2="21"/>
-                                </svg>
-                                2.5 Baños
-                            </span>
-                        </div>
-                        <div class="property-card__footer">
-                            <p class="property-card__price">$445,000 <span>USD</span></p>
-                            <a href="#contacto" class="property-card__btn">Ver Detalles</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Propiedad 3 -->
-                <article class="property-card">
-                    <div class="property-card__image-wrapper">
-                        <img
-                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
-                            alt="Villa mediterránea"
-                            class="property-card__image"
-                        >
-                        <span class="property-card__badge property-card__badge--sold">Vendida</span>
-                        <button class="property-card__favorite" aria-label="Agregar a favoritos">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="property-card__content">
-                        <div class="property-card__location">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                            <span>Ridgeland, Mississippi</span>
-                        </div>
-                        <h3 class="property-card__title">Villa Estilo Mediterráneo</h3>
-                        <div class="property-card__features">
-                            <span class="feature">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                </svg>
-                                580 m²
-                            </span>
-                            <span class="feature">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M2 4v16"/>
-                                    <path d="M2 8h18a2 2 0 0 1 2 2v10"/>
-                                    <path d="M2 17h20"/>
-                                    <path d="M6 8v9"/>
-                                </svg>
-                                5 Recámaras
-                            </span>
-                            <span class="feature">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>
-                                    <line x1="10" x2="8" y1="5" y2="7"/>
-                                    <line x1="2" x2="22" y1="12" y2="12"/>
-                                    <line x1="7" x2="7" y1="19" y2="21"/>
-                                    <line x1="17" x2="17" y1="19" y2="21"/>
-                                </svg>
-                                4 Baños
-                            </span>
-                        </div>
-                        <div class="property-card__footer">
-                            <p class="property-card__price">$937,500 <span>USD</span></p>
-                            <a href="#contacto" class="property-card__btn">Ver Detalles</a>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
 
             <!-- Botón ver más -->
             <div class="properties__cta">
@@ -552,8 +622,8 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p>info@casaposibleusa.com</p>
-                            <p>dinorah@hgroupms.com</p>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="543d3a323b1437352735243b273d3638312127357a373b39">[email&#160;protected]</a></p>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="07636e696875666f476f60756872776a742964686a">[email&#160;protected]</a></p>
                         </div>
                     </div>
 
@@ -711,6 +781,16 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+
+    <script>
+    function searchHomes(e) {
+        e.preventDefault();
+        window.open('https://link.flexmls.com/1lpmop7msaok,4', '_blank');
+    }
+    function searchNearMe() {
+        window.open('https://link.flexmls.com/1lpmop7msaok,4', '_blank');
+    }
+    </script>
 
 </body>
 </html>
