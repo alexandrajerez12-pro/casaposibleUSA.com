@@ -423,4 +423,15 @@ function debounce(func, wait) {
 // ==============================================
 console.log('%c🏠 Dinorah Nation - Bienes Raíces', 'font-size: 20px; font-weight: bold; color: #1A2B3C;');
 console.log('%c✨ Sitio web desarrollado con amor', 'font-size: 12px; color: #C5A059;');
+// ==============================================
+// 13. BUSCADOR DEL HERO
+// ==============================================
+function searchHomes(e) {
+    e.preventDefault();
+    window.location.href = '#propiedades';
+}
+
+function searchNearMe() {
+    window.location.href = '#propiedades';
+}
 console.log('%c📧 Para cualquier duda, revisa los comentarios en el código', 'font-size: 12px; color: #6C757D;');

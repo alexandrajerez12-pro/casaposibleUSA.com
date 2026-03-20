@@ -1769,5 +1769,39 @@ input, select, textarea {
         --color-text: var(--color-gray-100);
     }
     */
+
+    /* ===== FLEXMLS IFRAME ANCHO COMPLETO ===== */
+.properties__flexmls {
+    margin-top: var(--space-16);
+    padding: var(--space-12) 0;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 100%;
+}
+
+.properties__flexmls iframe {
+    width: 100% !important;
+    min-height: 700px;
+    border-radius: 0;
+    display: block;
+}
+
+.flexmls__title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    padding: 0 var(--space-12);
+}
+
+.flexmls__subtitle {
+    font-size: 1rem;
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+    padding: 0 var(--space-12);
+}
 }
 /* Group for multiple logos in header - Removed */
