@@ -1,7 +1,7 @@
 /* ==============================================
    DINORAH NATION - BIENES RAÍCES DE LUJO
    Estilos CSS Modernos y Responsivos (Mobile First)
-   
+
    PALETA DE COLORES:
    - Azul Marino: #1A2B3C (color principal)
    - Dorado Suave: #C5A059 (acento)
@@ -17,12 +17,12 @@
     --color-primary: #1A2B3C;
     --color-primary-light: #2A3B4C;
     --color-primary-dark: #0A1B2C;
-    
+
     /* Color acento (Dorado) */
     --color-accent: #C5A059;
     --color-accent-light: #D4B574;
     --color-accent-dark: #A68942;
-    
+
     /* Colores neutrales */
     --color-white: #FFFFFF;
     --color-gray-100: #F8F9FA;
@@ -34,11 +34,11 @@
     --color-gray-700: #495057;
     --color-gray-800: #343A40;
     --color-gray-900: #212529;
-    
+
     /* Tipografía */
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Raleway', 'Segoe UI', sans-serif;
-    
+
     /* Tamaños de fuente */
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
@@ -50,7 +50,7 @@
     --text-4xl: 2.25rem;
     --text-5xl: 3rem;
     --text-6xl: 3.75rem;
-    
+
     /* Espaciado */
     --space-1: 0.25rem;
     --space-2: 0.5rem;
@@ -64,25 +64,25 @@
     --space-16: 4rem;
     --space-20: 5rem;
     --space-24: 6rem;
-    
+
     /* Bordes y sombras */
     --radius-sm: 0.25rem;
     --radius-md: 0.5rem;
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
     --radius-full: 9999px;
-    
+
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
     --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
-    
+
     /* Transiciones */
     --transition-fast: 150ms ease;
     --transition-base: 300ms ease;
     --transition-slow: 500ms ease;
-    
+
     /* Z-index */
     --z-dropdown: 100;
     --z-sticky: 200;
@@ -252,9 +252,12 @@ input, select, textarea {
     transition: all var(--transition-base);
 }
 
+.header--scrolled {
+    box-shadow: var(--shadow-md);
+}
+
 /* ===========================
    Propiedades - mostrar solo imágenes
-   Oculta badges, botones y contenido de las tarjetas
    =========================== */
 .property-card__content,
 .property-card__badge,
@@ -290,14 +293,9 @@ input, select, textarea {
     display: block;
 }
 
-.header--scrolled {
-    box-shadow: var(--shadow-md);
-}
-
-/* ============================= */
-/* HEADER LOGOS CONFIGURACIÓN   */
-/* ============================= */
-
+/* =============================
+   HEADER LOGOS CONFIGURACIÓN
+   ============================= */
 .header__container {
     display: flex;
     align-items: center;
@@ -334,19 +332,17 @@ input, select, textarea {
     width: auto;
     object-fit: contain;
     display: block;
-    
 }
 
 @media (max-width: 767px) {
     .partner__logo {
         display: none;
     }
-    
+
     .header__logo-container {
         gap: 15px;
     }
 }
-
 
 /* Navegación */
 .header__nav {
@@ -460,18 +456,18 @@ input, select, textarea {
         transition: all var(--transition-base);
         box-shadow: var(--shadow-lg);
     }
-    
+
     .header__nav.active {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
-    
+
     .nav__list {
         flex-direction: column;
         gap: var(--space-4);
     }
-    
+
     .nav__link {
         font-size: var(--text-base);
     }
@@ -487,7 +483,7 @@ input, select, textarea {
     align-items: center;
     justify-content: center;
     padding: var(--space-24) 0 var(--space-16);
-    background: 
+    background:
         linear-gradient(135deg, rgba(26, 43, 60, 0.85) 0%, rgba(26, 43, 60, 0.7) 100%),
         url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80') center/cover no-repeat;
     overflow: hidden;
@@ -1159,32 +1155,42 @@ input, select, textarea {
     text-align: center;
 }
 
-/* FlexMLS - Listado de propiedades */
+/* ==============================================
+   FlexMLS - Listado de propiedades
+   ============================================== */
 .properties__flexmls {
     margin-top: var(--space-16);
-    padding: var(--space-12);
+    padding: var(--space-12) 0;
     background: var(--color-white);
     border-radius: var(--radius-lg);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .flexmls__title {
     font-size: 1.75rem;
     font-weight: 600;
-    color: var(--color-dark);
-    margin-bottom: var(--space-2);
-    font-family: var(--font-display);
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    padding: 0 var(--space-12);
 }
 
 .flexmls__subtitle {
     font-size: 1rem;
     color: var(--color-gray-600);
-    margin-bottom: var(--space-6);
+    margin-bottom: 1.5rem;
+    padding: 0 var(--space-12);
 }
 
 .properties__flexmls iframe {
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100% !important;
+    min-height: 700px;
+    border: 0;
+    border-radius: 0;
+    display: block;
 }
 
 /* ==============================================
@@ -1532,146 +1538,172 @@ input, select, textarea {
    11. FOOTER
    ============================================== */
 .footer {
-    background: var(--color-gray-900);
-    color: var(--color-gray-400);
-    padding-top: var(--space-16);
+    background: #0f1720;
+    color: rgba(255,255,255,0.85);
+    padding-top: 70px;
+    border-top: 1px solid rgba(212,175,55,0.15);
 }
 
 .footer__container {
     display: grid;
-    gap: var(--space-8);
-    padding-bottom: var(--space-12);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-@media (min-width: 768px) {
-    .footer__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1200px) {
-    .footer__container {
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-    }
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    padding-bottom: 40px;
 }
 
 .footer__brand {
-    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.footer__logo {
-    margin-bottom: var(--space-4);
+.footer__logo-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-decoration: none;
+    max-width: 100%;
+}
+
+.logo__image--footer {
+    width: 165px;
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+    display: block;
+}
+
+.footer__brand-info {
+    border-left: 2px solid rgba(212,175,55,0.5);
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.88);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.45;
 }
 
 .footer__description {
-    font-size: var(--text-sm);
-    line-height: 1.7;
+    color: rgba(255,255,255,0.68);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 420px;
+    margin: 0;
 }
 
 .footer__links h4,
 .footer__services h4,
 .footer__contact h4 {
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--color-white);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: var(--space-4);
+    color: #d4af37;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    font-family: 'Playfair Display', serif;
 }
 
-.footer__links ul li,
-.footer__services ul li {
-    margin-bottom: var(--space-2);
+.footer__links ul,
+.footer__services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__links li,
+.footer__services li {
+    margin-bottom: 12px;
 }
 
 .footer__links a,
 .footer__services a {
-    font-size: var(--text-sm);
-    color: var(--color-gray-400);
-    transition: color var(--transition-fast);
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+    display: inline-block;
 }
 
 .footer__links a:hover,
 .footer__services a:hover {
-    color: var(--color-accent);
+    color: #d4af37;
+    transform: translateX(4px);
 }
 
 .footer__contact p {
-    font-size: var(--text-sm);
-    margin-bottom: var(--space-2);
+    margin: 0 0 12px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
 }
 
 .footer__bottom {
-    padding: var(--space-6) 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 22px 0;
     text-align: center;
 }
 
-.footer__bottom .container {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-}
-
-@media (min-width: 768px) {
-    .footer__bottom .container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
 .footer__bottom p {
-    font-size: var(--text-sm);
-    
-}
-
-.footer__partner {
-    font-size: var(--text-xs);
-    opacity: 0.7;
-}
-
-.footer__partner a {
-    color: var(--color-accent);
-    text-decoration: none;
-    transition: opacity var(--transition-fast);
-}
-
-.footer__partner a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
-
-       
+    margin: 0;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.9rem;
 }
 
 /* ==============================================
-   LOGO - IDEAS DE ESTILO (descomenta solo una)
+   FOOTER RESPONSIVE
    ============================================== */
-
-/* --- IDEA 1: Halo blanco suave alrededor del logo --- */
-.logo__image {
-  filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6));
+@media (max-width: 992px) {
+    .footer__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 30px;
+    }
 }
 
-/* --- IDEA 2: Invertir colores y rotar tono para mantener el rojo --- */
-/* .logo__image {
-  filter: invert(1) hue-rotate(180deg) brightness(1.5);
-} */
+@media (max-width: 600px) {
+    .footer {
+        padding-top: 50px;
+    }
 
-/* --- IDEA 3: Realzar brillo, contraste y saturación --- */
-/* .logo__image {
-  filter: brightness(1.2) contrast(1.1) saturate(1.3);
-} */
+    .footer__container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
 
-/* --- IDEA 4: Contenedor con efecto cristal esmerilado --- */
-/* .logo-container {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 12px;
-  backdrop-filter: blur(5px);
-} */
+    .footer__logo-group {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .logo__image--footer {
+        width: 185px;
+    }
 
+    .footer__brand-info {
+        border-left: none;
+        border-top: 2px solid rgba(212,175,55,0.5);
+        padding-left: 0;
+        padding-top: 14px;
+        text-align: center;
+    }
+
+    .footer__description {
+        margin: 0 auto;
+    }
+}
+
+/* ==============================================
+   LOGO - IDEAS DE ESTILO
+   ============================================== */
+
+/* Halo blanco suave alrededor del logo */
+.logo__image {
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6));
+}
 
 /* ==============================================
    12. ANIMACIONES Y EFECTOS
@@ -1739,8 +1771,6 @@ input, select, textarea {
     color: var(--color-gray-600);
 }
 
-
-
 /* ==============================================
    13. MEDIA QUERIES ADICIONALES
    ============================================== */
@@ -1754,54 +1784,20 @@ input, select, textarea {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    
+
     html {
         scroll-behavior: auto;
     }
 }
 
-/* Modo oscuro (opcional) */
+/* Modo oscuro (opcional)
+   Descomenta si deseas soporte automático
+*/
+/*
 @media (prefers-color-scheme: dark) {
-    /* Descomenta estas líneas si deseas soporte de modo oscuro automático */
-    /*
     :root {
         --color-background: var(--color-gray-900);
         --color-text: var(--color-gray-100);
     }
-    */
-
-    /* ===== FLEXMLS IFRAME ANCHO COMPLETO ===== */
-.properties__flexmls {
-    margin-top: var(--space-16);
-    padding: var(--space-12) 0;
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 100%;
 }
-
-.properties__flexmls iframe {
-    width: 100% !important;
-    min-height: 700px;
-    border-radius: 0;
-    display: block;
-}
-
-.flexmls__title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-    font-family: var(--font-heading);
-    padding: 0 var(--space-12);
-}
-
-.flexmls__subtitle {
-    font-size: 1rem;
-    color: var(--color-gray-600);
-    margin-bottom: 1.5rem;
-    padding: 0 var(--space-12);
-}
-}
-/* Group for multiple logos in header - Removed */
+*/
