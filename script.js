@@ -427,11 +427,44 @@ console.log('%c✨ Sitio web desarrollado con amor', 'font-size: 12px; color: #C
 // 13. BUSCADOR DEL HERO
 // ==============================================
 function searchHomes(e) {
-    e.preventDefault();
-    window.location.href = '#propiedades';
+    if (e) e.preventDefault();
+    
+    if (typeof showNotification === 'function') {
+        showNotification('¡Búsqueda iniciada! Te mostraremos las propiedades disponibles.', 'success');
+    }
+    
+    const targetElement = document.getElementById('propiedades');
+    if (targetElement) {
+        const header = document.getElementById('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    } else {
+        window.location.href = '#propiedades';
+    }
 }
 
 function searchNearMe() {
-    window.location.href = '#propiedades';
+    if (typeof showNotification === 'function') {
+        showNotification('Buscando propiedades cerca de tu ubicación...', 'success');
+    }
+    
+    const targetElement = document.getElementById('propiedades');
+    if (targetElement) {
+        const header = document.getElementById('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    } else {
+        window.location.href = '#propiedades';
+    }
 }
 console.log('%c📧 Para cualquier duda, revisa los comentarios en el código', 'font-size: 12px; color: #6C757D;');
