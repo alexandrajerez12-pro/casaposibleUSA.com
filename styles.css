@@ -1571,7 +1571,7 @@ input, select, textarea {
 .footer {
     background: #0f1720;
     color: rgba(255,255,255,0.85);
-    padding-top: 70px;
+    padding-top: 40px;
     border-top: 1px solid rgba(212,175,55,0.15);
 }
 
@@ -1580,7 +1580,7 @@ input, select, textarea {
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 40px;
     align-items: start;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .footer__brand {
@@ -1636,7 +1636,8 @@ input, select, textarea {
     color: #d4af37;
     font-size: 1rem;
     margin-bottom: 18px;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-body); /* ← Raleway */
+    font-weight: 600;
 }
 
 .footer__links ul,
@@ -1681,6 +1682,7 @@ input, select, textarea {
     margin: 0;
     color: rgba(255,255,255,0.55);
     font-size: 0.9rem;
+    
 }
 
 /* ==============================================
@@ -1724,6 +1726,11 @@ input, select, textarea {
 
     .footer__description {
         margin: 0 auto;
+    .footer__taglines {
+        display: flex;
+        flex-direction: column;
+        gap: 4px; /* Ajusta a tu gusto: 2px, 4px, 6px */
+}
     }
 }
 
